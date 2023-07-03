@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit; 
+        }
+
+        html {
+        box-sizing: border-box;
+        font-size: 62.5%; 
+        }
+
+        body {
+        font-family:  sans-serif;
+        color: #333;
+        font-weight: 300;
+        line-height: 1.6; 
+        }
+
+        .container {
+        width: 70%;
+        margin: 2rem auto; 
+        }
+
+        .gallery {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 1.5rem; 
+        }
+
+        .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; 
+        }
+
+        .gallery__item--1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        }
+
+        .gallery__item--2 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        }
+
+        .gallery__item--3 {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        }
+
+        .gallery__item--4 {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 7;
+
+        }
+
+        .gallery__item--5 {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 3;
+        grid-row-end: 5;
+
+        }
+
+        .gallery__item--6 {
+        grid-column-start: 5;
+        grid-column-end: 8;
+        grid-row-start: 5;
+        grid-row-end: 7;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img src="https://images.pexels.com/photos/15645160/pexels-photo-15645160/free-photo-of-squirrel-sitting-on-ground-in-nature.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gallery image 1" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="https://images.pexels.com/photos/17150896/pexels-photo-17150896/free-photo-of-herd-of-horses-and-a-foal-on-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gallery image 2" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="https://images.pexels.com/photos/17328461/pexels-photo-17328461/free-photo-of-stairway-to-a-heavenly-view.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gallery image 3" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <img src="https://images.pexels.com/photos/12411681/pexels-photo-12411681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gallery image 4" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <img src="https://images.pexels.com/photos/16441221/pexels-photo-16441221/free-photo-of-colorful-flowers-in-the-garden.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gallery image 5" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+                <img src="https://images.pexels.com/photos/16849878/pexels-photo-16849878/free-photo-of-water-lily-flowers-and-leaves-on-a-water-surface.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Gallery image 6" class="gallery__img">
+            </figure>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
