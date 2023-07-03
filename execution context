@@ -1,0 +1,54 @@
+The execution context is a concept in JavaScript that defines the environment in which JavaScript code is executed. It includes variables, functions, objects, and the scope chain. Each time a function is called, a new execution context is created.
+
+To understand the execution context better, let's break it down into three components: the Variable Environment, the Lexical Environment, and the Scope Chain.
+
+    Variable Environment:
+
+        The Variable Environment contains variables and function declarations within the current execution context.
+
+        It consists of two main components: the Variable Object and the Outer Environment.
+
+        Variable Object: It stores variables, function declarations, and function arguments as properties. In the case of global execution context, the Variable Object is the global object (e.g., window in a browser environment).
+
+        Outer Environment: It refers to the parent execution context. It allows access to variables and functions defined in the outer scope (e.g., variables defined in an outer function from an inner function).
+
+    Lexical Environment:
+        The Lexical Environment is similar to the Variable Environment, but it focuses on the lexical scope.
+        It also contains the environment record, which stores the identifier bindings and function declarations.
+        The Lexical Environment is used for name resolution during the compilation phase.
+
+    Scope Chain:
+        The Scope Chain is a list of all the variable objects of each execution context, starting from the current execution context and going up to the global execution context.
+        It allows access to variables and functions from outer scopes through a process called scope resolution.
+        When a variable is accessed, JavaScript searches for it in the current execution context's variable object and continues up the scope chain until it finds the variable or reaches the global scope.
+
+Diagram of Execution Context:
++--------------------------+
+|                          |
+| Global Execution Context |
+|                          |
+|  Variable Environment    |
+|  Lexical Environment     |
+|  Scope Chain              |
+|                          |
++--------------------------+
+        ↑
+        |
+        |
+        |
++--------------------------+
+|                          |
+|  Function Execution Context  |
+|                          |
+|  Variable Environment    |
+|  Lexical Environment     |
+|  Scope Chain              |
+|                          |
++--------------------------+
+In the diagram, we have the Global Execution Context at the top. It represents the overall context of the entire JavaScript program. Below it, we can have multiple Function Execution Contexts created when functions are invoked.
+
+Each Execution Context has its own Variable Environment, Lexical Environment, and Scope Chain. The Variable Environment stores variables and function declarations, while the Lexical Environment focuses on the lexical scope and name resolution. The Scope Chain connects the Execution Contexts, allowing access to variables and functions from outer scopes.
+
+When a function is called, a new Function Execution Context is created and pushed onto the call stack. Once the function finishes executing, the corresponding Execution Context is popped off the call stack, and the control returns to the previous Execution Context.
+
+Understanding the execution context is crucial for comprehending variable scoping, hoisting, closures, and how JavaScript manages and resolves identifiers within a program.
