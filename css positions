@@ -1,0 +1,110 @@
+
+Explanations and code examples for each CSS position:
+
+  Static Position:
+        The default position value.
+        Elements with position: static; are positioned according to the normal flow of the document.
+        They are not affected by top, bottom, left, or right properties.
+
+
+<style>
+  .static-box {
+    position: static;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+  }
+</style>
+
+<div class="static-box"></div>
+
+
+Relative Position:
+
+    Elements with position: relative; are positioned relative to their normal position.
+    They can be moved using the top, bottom, left, and right properties.
+
+Example:
+
+<style>
+  .relative-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    top: 50px;
+    left: 50px;
+  }
+</style>
+
+<div class="relative-box"></div>
+
+
+Absolute Position:
+
+    Elements with position: absolute; are positioned relative to their nearest positioned ancestor.
+    If no positioned ancestor exists, they are positioned relative to the initial containing block (usually the document body).
+
+Example:
+
+<style>
+  .parent {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+  }
+  
+  .absolute-box {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    top: 50px;
+    left: 50px;
+  }
+</style>
+
+<div class="parent">
+  <div class="absolute-box"></div>
+</div>
+
+
+Fixed Position:
+
+    Elements with position: fixed; are positioned relative to the viewport (the browser window).
+    They stay fixed in their position even when the page is scrolled.
+
+Example:
+<style>
+  .fixed-box {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: orange;
+    top: 20px;
+    right: 20px;
+  }
+</style>
+
+<div class="fixed-box"></div>
+
+
+Sticky Position:
+
+    Elements with position: sticky; are positioned based on the user's scroll position.
+    They behave like position: relative; until a specified threshold is met, then they become position: fixed; until the user scrolls back to the threshold.
+
+Example:
+
+<style>
+  .sticky-box {
+    position: sticky;
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+    top: 20px;
+  }
+</style>
+
+<div class="sticky-box"></div>
