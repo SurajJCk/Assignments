@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Basic Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Form with Basic Validation</h2>
+  <form id="myForm" onsubmit="validateForm(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <span id="nameError" class="error"></span>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <span id="emailError" class="error"></span>
+    <br><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" required>
+    <span id="phoneError" class="error"></span>
+    <br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <span id="passwordError" class="error"></span>
+    <br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" required>
+    <span id="ageError" class="error"></span>
+    <br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <span id="genderError" class="error"></span>
+    <br><br>
+
+    <label for="date">Date:</label>
+    <input type="date" id="date" required>
+    <span id="dateError" class="error"></span>
+    <br><br>
+
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" required>
+    <span id="colorError" class="error"></span>
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Clear previous error messages
+      clearErrors();
+
+      // Get form values
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let phone = document.getElementById("phone").value.trim();
+      let password = document.getElementById("password").value;
+      let age = document.getElementById("age").value;
+      let gender = document.getElementById("gender").value;
+      let date = document.getElementById("date").value;
+      let color = document.getElementById("color").value;
+
+      // Perform validation
+      let isValid = true;
+
+      if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required";
+        isValid = false;
+      }
+
+      if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required";
+        isValid = false;
+      } else if (!isValidEmail(email)) {
+        document.getElementById("emailError").textContent = "Invalid email format";
+        isValid = false;
+      }
+
+      if (phone === "") {
+        document.getElementById("phoneError").textContent = "Phone number is required";
+        isValid = false;
+      } else if (!isValidPhone(phone)) {
+        document.getElementById("phoneError").textContent = "Invalid phone number format";
+        isValid = false;
+      }
+
+      if (password === "") {
+        document.getElementById("passwordError").textContent = "Password is required";
+        isValid = false;
+      }
+
+      if (age === "" || age < 18) {
+        document.getElementById("ageError").textContent = "Age must be at least 18";
+        isValid = false;
+      }
+
+      if (gender === "") {
+        document.getElementById("genderError").textContent = "Gender is required";
+        isValid = false;
+      }
+
+      if (date === "") {
+        document.getElementById("dateError").textContent = "Date is required";
+        isValid = false;
+      }
+
+      if (color === "") {
+        document.getElementById("colorError").textContent = "Favorite color is required";
+        isValid = false;
+      }
+
+      // Submit the form if valid
+      if (isValid) {
+        document.getElementById("myForm").submit();
+      }
+    }
+
+    function clearErrors() {
+      let errorElements = document.getElementsByClassName("error");
+      for (let i = 0; i < errorElements.length; i++) {
+        errorElements[i].textContent = "";
+      }
+    }
+
+    function isValidEmail(email) {
+      // Basic email validation by checking for presence of '@' and '.'
+      return email.includes("@") && email.includes(".");
+    }
+
+    function isValidPhone(phone) {
+      // Basic phone number validation by checking for 10 digits
+      return phone.length === 10 && !isNaN(phone);
+    }
+  </script>
+</body>
+</html>
