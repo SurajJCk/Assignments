@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f2f2f2;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-list {
+      list-style-type: none;
+      display: flex;
+    }
+
+    .nav-list li {
+      margin-right: 20px;
+    }
+
+    .search-button,
+    .login-button,
+    .signup-button,
+    .learn-more {
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .search-button:hover,
+    .login-button:hover,
+    .signup-button:hover {
+      background-color: #45a049;
+    }
+
+    .content {
+      display: flex;
+      margin-top: 40px;
+      
+    }
+
+    .text-section {
+      flex: 1;
+      padding: 40px;
+      margin-top: 60px;
+    }
+
+    .text-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .text-section p {
+      margin-bottom: 20px;
+    }
+
+    .text-section button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+
+    }
+
+    .image-section {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image-section img {
+      max-width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav-list">
+        <li>Products</li>
+        <li>Resources</li>
+        <li>Shop</li>
+        <li>Pricing</li>
+      </ul>
+    </nav>
+    <div class="logo">Logo</div>
+    <div>
+      <button class="search-button">Search</button>
+      <button class="login-button">Login</button>
+      <button class="signup-button">Signup</button>
+    </div>
+  </header>
+  <div class="content">
+    <div class="text-section">
+      <h2>Welcome to our website</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus ultrices aliquet. Sed viverra ligula sit amet leo ullamcorper tempus.</p>
+      <button class="learn-more">Learn More</button>
+    </div>
+    <div class="image-section">
+      <img src="https://images.pexels.com/photos/17168353/pexels-photo-17168353/free-photo-of-balloons-flying-in-cappadocia-in-morning.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Image">
+    </div>
+  </div>
+
+</body>
+</html>
