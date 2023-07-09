@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Placeholder API</title>
+    <style>
+        #loader {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .skeleton {
+            background-color: #f0f0f0;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .data-container {
+            display: none;
+        }
+
+        .data-container.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+        <div class="skeleton"></div>
+    </div>
+
+    <div id="data-container" class="data-container"></div>
+
+    <script>
+        let loader = document.getElementById('loader');
+        let dataContainer = document.getElementById('data-container');
+
+        // Fetch data from JSON Placeholder API
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(response => response.json())
+            .then(data => {
+                loader.style.display = 'none';
+                dataContainer.classList.add('show');
+
+                let html = '';
+                data.forEach(post => {
+                    html += '<div>';
+                    html += '<h3>' + post.title + '</h3>';
+                    html += '<p>' + post.body + '</p>';
+                    html += '</div>';
+                });
+
+                dataContainer.innerHTML = html;
+            })
+            .catch(error => {
+                loader.innerHTML = 'Error fetching data.';
+            });
+    </script>
+</body>
+</html>
+
+<!--
+    In this code, we first define CSS styles for the loader and skeleton elements. 
+
+    The loader is centered on the page using flexbox. The skeleton elements represent the loading state and are displayed as gray bars.
+
+    The data-container element initially has the display: none property, hiding it from view. 
+
+    The show class is added to the data-container element once the data is fetched to display the fetched data.
+
+    In JavaScript, we use the fetch() function to make a GET request to the JSON Placeholder API. Once the response is received, 
+
+    we convert it to JSON format using the response.json() method. We then handle the data by removing the loader and displaying the data-container element. 
+
+    We iterate over the fetched data and dynamically create HTML elements for each post using a forEach loop. 
+
+    Finally, we insert the HTML into the data-container element.
+
+    If there is an error during the fetch request, an error message is displayed in the loader element.
+-->
