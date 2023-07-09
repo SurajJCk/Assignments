@@ -29,3 +29,19 @@
     </script>
 </body>
 </html>
+
+<!--
+    In this code, we have an input box (<input>) and a submit button (<button>) wrapped in a container (<div>). 
+        
+    The list (<ul>) with the id "text-list" is placed below the input box. We use CSS to style the elements accordingly.
+
+    In JavaScript, we use getElementById() to get references to the input box, submit button, and text list. 
+    
+    We then attach a click event listener to the submit button using addEventListener(). 
+    
+    Inside the event handler function, we get the value of the input box using the value property and create a new list item (<li>) element. 
+        
+    We set the text content of the list item to the input text and append it to the text list using appendChild(). 
+        
+    Finally, we clear the input box by setting its value to an empty string.
+-->
