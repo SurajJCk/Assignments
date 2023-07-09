@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Box App</title>
+    <style>
+        #input-container {
+            margin-top: 20px;
+        }
+
+        #input-text {
+            width: 300px;
+            padding: 5px;
+        }
+
+        #submit-btn {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+
+        #text-list {
+            margin-top: 20px;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<head>
+    
+</head>
+<body>
+    <div id="input-container">
+        <input type="text" id="input-text" placeholder="Type something">
+        <button id="submit-btn">Submit</button>
+    </div>
+    
+    <ul id="text-list"></ul>
+
+    <script>
+        let inputText = document.getElementById('input-text');
+        let submitBtn = document.getElementById('submit-btn');
+        let textList = document.getElementById('text-list');
+
+        submitBtn.addEventListener('click', function() {
+            let text = inputText.value;
+            if (text.trim() !== '') {
+                let listItem = document.createElement('li');
+                listItem.textContent = text;
+                textList.appendChild(listItem);
+                inputText.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
