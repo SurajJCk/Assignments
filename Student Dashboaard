@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+            table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+            h1{
+                text-align: center;
+            }
+
+            .dashboard-container {
+                overflow-x: auto; 
+                border: 1px solid black;
+                color: white;
+                background-color: rgb(38, 37, 37);
+            }
+
+            .student-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px;
+                }
+
+            .student-table th,
+            .student-table td {
+                padding: 8px;
+                border: 1px solid #ccc;
+            }
+
+            
+            @media screen and (min-width: 768px) {
+            /* Display the table in three columns */
+            .student-table td,
+            .student-table th {
+                width: 33.33%;
+                }
+            }
+
+ 
+            @media screen and (max-width: 767px) {
+            /* Display the table in two columns */
+            .student-table th,
+            .student-table td:nth-last-child(1) {
+                display: none;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>Student Dashboard</h1>
+        <table class="student-table">
+         <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+         </tr>
+         <tr>
+            <td>Rahul Sharma</td>
+            <td>rahul.sharma@example.com</td>
+            <td>9876543210</td>
+         </tr>
+         <tr>
+            <td>Priya</td>
+            <td>priya.patel@example.com</td>
+            <td>8765432109</td>
+         </tr>
+         <tr>
+            <td>Amit Singh</td>
+            <td>amit.singh@example.com</td>
+            <td>7654321098</td>
+         </tr>
+         <tr>
+            <td>Sneha Verma</td>
+            <td>sneha.verma@example.com</td>
+            <td>6543210987</td>
+         </tr>
+         <tr>
+            <td>Mohit Agarwal</td>
+            <td>mohit.agarwal@example.com</td>
+            <td>5432109876</td>
+         </tr>
+         <tr>
+            <td>Neha Gupta</td>
+            <td>neha.gupta@example.com</td>
+            <td>4321098765</td>
+         </tr>
+         <tr>
+            <td>Rajesh Kumar</td>
+            <td>rajesh.kumar@example.com</td>
+            <td>3210987654</td>
+         </tr>
+         <tr>
+            <td>Anita Desai</td>
+            <td>anita.desai@example.com</td>
+            <td>2109876543</td>
+         </tr>
+         <tr>
+            <td>Varun Malhotra</td>
+            <td>varun.malhotra@example.com</td>
+            <td>1098765432</td>
+         </tr> 
+         <tr>
+            <td>Pooja Mehta</td>
+            <td>pooja.mehta@example.com</td>
+            <td>0987654321</td>
+         </tr> 
+        </table>
+      </div>
+      
+</body>
+</html>
