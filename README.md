@@ -14,3 +14,8 @@
 #Image Gallery
 ![Uploading imggal.png…]()
 
+#footer
+
+![footer](https://github.com/SurajJCk/Assignments/assets/33105027/7c8124da-243a-4473-a12b-56e735201e06)
+
+![footer2](https://github.com/SurajJCk/Assignments/assets/33105027/05913048-5c5d-4048-8fd0-81fb71d69944)
