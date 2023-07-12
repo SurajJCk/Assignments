@@ -19,3 +19,9 @@
 ![footer](https://github.com/SurajJCk/Assignments/assets/33105027/7c8124da-243a-4473-a12b-56e735201e06)
 
 ![footer2](https://github.com/SurajJCk/Assignments/assets/33105027/05913048-5c5d-4048-8fd0-81fb71d69944)
+
+#Responsive Grid Layout
+
+![responselayout](https://github.com/SurajJCk/Assignments/assets/33105027/e762d0ba-742b-44e9-aeca-f40ae9e6ee57)
+
+![rL](https://github.com/SurajJCk/Assignments/assets/33105027/db7e11d8-f2e9-4e2d-b502-4dadd0a42b8c)
